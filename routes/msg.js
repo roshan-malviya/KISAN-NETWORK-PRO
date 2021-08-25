@@ -10,7 +10,7 @@ const moment = require('moment')
 const saveMsg = require('../msg/sentMsg')
 
 
-
+// k = require('../msg/sentMsg.json')
 
 router.post('/',[
 
@@ -32,7 +32,7 @@ router.post('/',[
 
         const ress = await messanger(name,number,otp)
 
-          saveMsg(name,number,otp,time)
+         await saveMsg(name,number,otp,time)
 
         
         res.status(200).json({msg:ress})
